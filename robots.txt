@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://lisslovesyou.org/sitemap.xml
+
+# Disallow admin/private areas (none currently)
