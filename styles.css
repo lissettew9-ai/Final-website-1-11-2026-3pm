@@ -1617,13 +1617,10 @@ textarea:focus {
     }
     
     .footer-legal-links {
-        flex-direction: column;
-        gap: 0.75rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem 1rem;
         text-align: center;
-    }
-    
-    .footer-legal-links span {
-        display: none;
     }
     
     .disclaimer {
