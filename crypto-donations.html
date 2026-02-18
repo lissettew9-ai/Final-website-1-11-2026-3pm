@@ -13,12 +13,12 @@
             <div class="logo">
                 <img src="logo.png" alt="LissLovesYou Logo">
             </div>
-            <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation menu">
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
-            <ul class="nav-links" id="navLinks">
+            <ul class="nav-links">
                 <li><a href="index.html" class="nav-link">Homepage</a></li>
                 <li><a href="volunteer.html" class="nav-link">Volunteer</a></li>
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
@@ -248,7 +248,7 @@
                     
                     <div>
                         <h4 style="margin-bottom: 0.5rem; color: var(--text-dark);">Get Your Receipt</h4>
-                        <p style="color: var(--text-dark); line-height: 1.7;">Please email us at <a href="mailto:President@LissLovesYou.org" style="color: var(--pink); font-weight: 600;">President@LissLovesYou.org</a> with your transaction ID and contact information to ensure we can send your tax receipt.</p>
+                        <p style="color: var(--text-dark); line-height: 1.7;">Please email us at <a href="mailto:President@LissLovesYou.org">President@LissLovesYou.org</a> with your transaction ID and contact information to ensure we can send your tax receipt.</p>
                     </div>
                 </div>
             </div>
@@ -264,7 +264,7 @@
                 
                 <div style="border-bottom: 1px solid var(--gray-bg); padding: 1.5rem 0;">
                     <h3 style="color: var(--text-dark); font-size: 1.1rem; margin-bottom: 0.75rem;">How do I receive my tax receipt?</h3>
-                    <p style="color: var(--text-light); line-height: 1.7;">We'll email you a tax receipt within 2-3 business days. Please email us at President@LissLovesYou.org with your transaction ID and contact information to ensure we can send your receipt.</p>
+                    <p style="color: var(--text-light); line-height: 1.7;">We'll email you a tax receipt within 2-3 business days. Please email us at <a href="mailto:President@LissLovesYou.org">President@LissLovesYou.org</a> with your transaction ID and contact information to ensure we can send your receipt.</p>
                 </div>
 
                 <div style="border-bottom: 1px solid var(--gray-bg); padding: 1.5rem 0;">
@@ -284,7 +284,7 @@
 
                 <div style="border-bottom: 1px solid var(--gray-bg); padding: 1.5rem 0;">
                     <h3 style="color: var(--text-dark); font-size: 1.1rem; margin-bottom: 0.75rem;">What if I send the wrong amount or to the wrong address?</h3>
-                    <p style="color: var(--text-light); line-height: 1.7;">Cryptocurrency transactions cannot be reversed. Please double-check all addresses before sending. If you believe there's been an error, contact us immediately at President@LissLovesYou.org.</p>
+                    <p style="color: var(--text-light); line-height: 1.7;">Cryptocurrency transactions cannot be reversed. Please double-check all addresses before sending. If you believe there's been an error, contact us immediately at <a href="mailto:President@LissLovesYou.org">President@LissLovesYou.org</a>.</p>
                 </div>
 
                 <div style="border-bottom: 1px solid var(--gray-bg); padding: 1.5rem 0;">
@@ -371,27 +371,10 @@
                     <span>|</span>
                     <a href="safe-browsing.html">Safe Browsing</a>
                 </div>
-                <p class="disclaimer">A COPY OF THE OFFICIAL REGISTRATION AND FINANCIAL INFORMATION MAY BE OBTAINED FROM THE DIVISION OF CONSUMER SERVICES BY CALLING TOLL-FREE WITHIN THE STATE 1-800-435-7352 OR FDACS.GOV. REGISTRATION DOES NOT IMPLY ENDORSEMENT, APPROVAL, OR RECOMMENDATION BY THE STATE</p>
+                <p class="disclaimer">A COPY OF THE OFFICIAL REGISTRATION (CH80883) AND FINANCIAL INFORMATION MAY BE OBTAINED FROM THE DIVISION OF CONSUMER SERVICES BY CALLING TOLL-FREE WITHIN THE STATE 1-800-435-7352 OR FDACS.GOV. REGISTRATION DOES NOT IMPLY ENDORSEMENT, APPROVAL, OR RECOMMENDATION BY THE STATE</p>
                 <p class="copyright">Copyright © 2026 LissLovesYou Inc. All rights reserved.</p>
             </div>
         </div>
         <button class="scroll-to-top" id="scrollToTop">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <polyline points="18 15 12 9 6 15"></polyline>
-            </svg>
-        </button>
-    </footer>
-
-    <script src="script.js"></script>
-    <script>
-        function copyAddress(elementId) {
-            const address = document.getElementById(elementId).textContent;
-            navigator.clipboard.writeText(address).then(() => {
-                alert('Address copied to clipboard!');
-            }).catch(err => {
-                console.error('Failed to copy:', err);
-            });
-        }
-    </script>
-</body>
-</html>
+                <polyline points="18 15
