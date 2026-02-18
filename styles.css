@@ -1058,6 +1058,11 @@ textarea:focus {
         grid-template-columns: 1fr;
     }
     
+    /* Mobile Navigation Container Spacing */
+    .nav-container {
+        gap: 1rem;
+    }
+    
     /* Mobile Menu Toggle Button */
     .mobile-menu-toggle {
         display: flex;
@@ -1071,6 +1076,7 @@ textarea:focus {
         padding: 0;
         z-index: 1001;
         margin-left: auto;
+        margin-right: 1rem;
     }
     
     .mobile-menu-toggle span {
@@ -1126,7 +1132,9 @@ textarea:focus {
     }
     
     .donate-btn {
-        margin-right: 1rem;
+        margin-right: 0.5rem;
+        padding: 8px 20px;
+        font-size: 0.9rem;
     }
     
     .hero-title {
