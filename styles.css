@@ -1061,15 +1061,27 @@ textarea:focus {
     /* Mobile Navigation Container Spacing */
     .nav-container {
         gap: 1rem;
+        align-items: center;
+    }
+    
+    /* Logo on Mobile */
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+    
+    .logo img {
+        height: 40px;
     }
     
     /* Mobile Menu Toggle Button */
     .mobile-menu-toggle {
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: center;
+        align-items: center;
         width: 30px;
-        height: 25px;
+        height: 30px;
         background: transparent;
         border: none;
         cursor: pointer;
@@ -1077,6 +1089,7 @@ textarea:focus {
         z-index: 1001;
         margin-left: auto;
         margin-right: 1rem;
+        position: relative;
     }
     
     .mobile-menu-toggle span {
@@ -1085,20 +1098,38 @@ textarea:focus {
         background: var(--text-dark);
         border-radius: 10px;
         transition: all 0.3s ease;
-        transform-origin: 1px;
+        transform-origin: center;
+        position: absolute;
+    }
+    
+    .mobile-menu-toggle span:nth-child(1) {
+        top: 6px;
+    }
+    
+    .mobile-menu-toggle span:nth-child(2) {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    .mobile-menu-toggle span:nth-child(3) {
+        bottom: 6px;
     }
     
     .mobile-menu-toggle.active span:nth-child(1) {
         transform: rotate(45deg);
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
     }
     
     .mobile-menu-toggle.active span:nth-child(2) {
         opacity: 0;
-        transform: translateX(20px);
+        transform: translateY(-50%) translateX(20px);
     }
     
     .mobile-menu-toggle.active span:nth-child(3) {
         transform: rotate(-45deg);
+        bottom: 50%;
+        transform: translateY(50%) rotate(-45deg);
     }
     
     /* Mobile Navigation */
@@ -1133,8 +1164,13 @@ textarea:focus {
     
     .donate-btn {
         margin-right: 0.5rem;
-        padding: 8px 20px;
+        padding: 10px 20px;
         font-size: 0.9rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        line-height: 1;
     }
     
     .hero-title {
