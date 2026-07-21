@@ -1,0 +1,32 @@
+{
+  "name": "lisslovesyou-website",
+  "version": "1.0.0",
+  "description": "LissLovesYou - Supporting children migrating to the United States",
+  "main": "script.js",
+  "scripts": {
+    "build": "esbuild speed-insights-init.js --bundle --format=esm --outfile=speed-insights-bundle.js --define:process.env.NODE_ENV=\\\"production\\\" --minify",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lissettew9-ai/Final-website-1-11-2026-3pm.git"
+  },
+  "keywords": [
+    "nonprofit",
+    "charity",
+    "children",
+    "migration"
+  ],
+  "author": "LissLovesYou",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lissettew9-ai/Final-website-1-11-2026-3pm/issues"
+  },
+  "homepage": "https://github.com/lissettew9-ai/Final-website-1-11-2026-3pm#readme",
+  "dependencies": {
+    "@vercel/speed-insights": "^2.0.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.1"
+  }
+}
