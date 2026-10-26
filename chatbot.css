@@ -1,4 +1,4 @@
-/* Chat assistant widget. Uses the site's colour variables, so the High contrast switch applies to it too. */
+/* "Ask Amour" chat widget. Uses the site's colour variables, so the High contrast switch applies to it too. */
 .chat-widget {
     position: fixed;
     left: 20px;
@@ -102,9 +102,8 @@
 .chat-bubble a { color: inherit; text-decoration: underline; font-weight: 600; }
 .chat-msg--assistant .chat-bubble a { color: #1a1a1a; }
 
-.chat-status { margin: 0; padding: 0 1rem; min-height: 1.2rem; font-size: 0.85rem; color: #555555; }
 
-.chat-suggestions { display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 0 1rem 0.75rem; }
+.chat-suggestions { display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 0.25rem 0 0; }
 .chat-suggestions[hidden] { display: none; }
 
 .chat-suggestion {
