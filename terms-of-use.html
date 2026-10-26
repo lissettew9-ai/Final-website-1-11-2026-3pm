@@ -51,21 +51,32 @@
     </style>
 </head>
 <body>
-    <nav class="navbar">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <nav class="navbar" aria-label="Main">
         <div class="container nav-container">
             <div class="logo">
-                <img src="logo.png" alt="LissLovesYou Logo" style="height: 50px;">
-                
+                <a href="index.html"><img src="logo.png" alt="LissLovesYou, home page"></a>
             </div>
-            <a href="index.html" class="donate-btn">Back to Home</a>
+            <button type="button" class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="primary-nav">
+                <li><a href="index.html" class="nav-link">Homepage</a></li>
+                <li><a href="volunteer.html" class="nav-link">Volunteer</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="donate.html" class="nav-link">Donate</a></li>
+            </ul>
+            <a href="https://www.zeffy.com/en-US/donation-form/donate-to-change-lives-5524" target="_blank" rel="noopener noreferrer" class="donate-btn">Donate<span class="visually-hidden"> (opens in a new tab)</span></a>
         </div>
     </nav>
 
-    <div class="policy-page">
+    <main class="policy-page" id="main-content" tabindex="-1">
         <a href="index.html" class="back-link">← Back to Home</a>
         
         <h1>Terms of Use</h1>
-        <p class="last-updated">Last Updated: 12/03/2025</p>
+        <p class="last-updated">Last Updated: 10/26/2026</p>
 
         <p>Welcome to LissLovesYou.org, the official website of LissLovesYou Inc. (the "Organization," "we," "us," or "our"). By accessing or using this website (the "Site"), you agree to be bound by these Terms of Use. Please read them carefully. If you do not agree to these Terms, please discontinue use of the Site.</p>
 
@@ -73,16 +84,17 @@
         <p>LissLovesYou.org is provided to share information about our mission, programs, volunteer opportunities, and ways to support our work. The content on this Site is for informational, educational, and charitable purposes only.</p>
 
         <h2>2. Acceptance of Terms</h2>
-        <p>By using this Site, you acknowledge that you have read, understood, and agree to these Terms of Use and our Privacy Policy. If you do not agree, please do not use the Site.</p>
+        <p>By using this Site, you acknowledge that you have read, understood, and agree to these Terms of Use and our <a href="privacy-policy.html">Privacy Policy</a>. If you do not agree, please do not use the Site.</p>
         <p>We may update or modify these Terms from time to time. Any changes will be posted here with a new "Last Updated" date. Your continued use of the Site constitutes acceptance of any updated Terms.</p>
 
         <h2>3. Use of Website Content</h2>
         <p>Unless otherwise stated, all content on this Site including text, graphics, logos, images, videos, and design elements is the property of LissLovesYou Inc. and is protected by copyright and other applicable laws.</p>
-        
+
         <p>You may:</p>
         <ul>
             <li>View, download, or print content for personal, non-commercial use.</li>
             <li>Share our content for educational or charitable purposes with proper attribution.</li>
+            <li>Use assistive technology, browser settings, or other tools to access, read, or convert our content into a format that works for you.</li>
         </ul>
 
         <p>You may not:</p>
@@ -92,16 +104,26 @@
             <li>Use our trademarks, logos, or branding without written permission.</li>
         </ul>
 
-        <h2>4. Donations and Payment Processing</h2>
+        <h2>4. Accessibility</h2>
+        <p>LissLovesYou Inc. is committed to making this Site usable by people of all abilities, including people with disabilities. We work toward conformance with the Web Content Accessibility Guidelines (WCAG) 2.2 Level AA and describe our efforts in our <a href="accessibility.html">Accessibility Statement</a>, which is incorporated into these Terms by reference.</p>
+        <ul>
+            <li><strong>Good-faith, ongoing effort.</strong> We review the Site regularly and work to fix barriers we find or that are reported to us. Despite our efforts, some content, features, or third-party services may not yet be fully accessible, and we do not guarantee that every page will be free of barriers at all times.</li>
+            <li><strong>Alternative access.</strong> If you have difficulty using any part of the Site, including donating, volunteering, or finding information, please contact us and we will work with you to provide the information or service by another reasonable means.</li>
+            <li><strong>Reporting a barrier.</strong> Please tell us about any accessibility problem by emailing <a href="mailto:President@LissLovesYou.org">President@LissLovesYou.org</a> or using the other contact details in the Accessibility Statement. Please include the page address and a description of the problem. We aim to reply within 5 business days.</li>
+            <li><strong>Contacting us first.</strong> We encourage anyone who experiences a barrier to let us know so that we can fix it promptly. This request does not limit any legal rights you may have.</li>
+        </ul>
+
+        <h2>5. Donations and Payment Processing</h2>
         <p>If you make a donation through the Site:</p>
         <ul>
             <li>Payments are processed securely through third-party providers.</li>
             <li>Your financial information is not stored on our servers.</li>
             <li>By submitting a donation, you confirm that the payment information you provide is accurate and authorized.</li>
+            <li>Donations are handled in accordance with our <a href="refund-policy.html">Refund Policy</a>.</li>
         </ul>
-        <p>All donations to LissLovesYou Inc. are tax-deductible to the fullest extent permitted by law. For official tax receipts, please contact us at <a href="mailto:President@LissLovesYou.org"><a href="mailto:President@LissLovesYou.org">President@LissLovesYou.org</a></a> if one is not automatically emailed to you.</p>
+        <p>LissLovesYou Inc. is a 501(c)(3) nonprofit organization, and donations may be tax-deductible to the fullest extent permitted by law. Whether and how much you may deduct depends on your own circumstances, so please consult your tax advisor. Unless we tell you otherwise in writing, no goods or services are provided in exchange for donations. For official tax receipts, please contact us at <a href="mailto:President@LissLovesYou.org">President@LissLovesYou.org</a> if one is not automatically emailed to you.</p>
 
-        <h2>5. User Conduct</h2>
+        <h2>6. User Conduct</h2>
         <p>By using the Site, you agree not to:</p>
         <ul>
             <li>Violate any laws or regulations.</li>
@@ -112,20 +134,21 @@
         </ul>
         <p>We reserve the right to restrict or terminate access for users who violate these Terms.</p>
 
-        <h2>6. Links to Third-Party Websites</h2>
-        <p>Our Site may contain links to third-party websites or services. These are provided for convenience only. We do not own, control, or endorse these third-party sites, and we are not responsible for their content or policies.</p>
-        <p>We encourage you to review the Terms and Privacy Policies of any external websites you visit.</p>
+        <h2>7. Links to Third-Party Websites and Services</h2>
+        <p>Our Site may contain links to third-party websites or services, and some features, such as our online donation form (provided by Zeffy), are provided by third parties. These are provided for convenience only. We do not own, control, or endorse these third-party sites and services, and we are not responsible for their content, policies, security, or accessibility.</p>
+        <p>We encourage you to review the Terms and Privacy Policies of any external websites or services you use. If you cannot use a third-party service because of a disability, please contact us and we will work with you to find another way to participate.</p>
 
-        <h2>7. Disclaimer of Warranties</h2>
+        <h2>8. Disclaimer of Warranties</h2>
         <p>The Site is provided "as is" and "as available" without warranties of any kind, express or implied.</p>
         <p>We do not warrant that:</p>
         <ul>
             <li>The Site will always be available, secure, or free of errors.</li>
             <li>Content is accurate, complete, or up to date.</li>
+            <li>The Site, including third-party features linked from it, will be free of accessibility barriers at all times, although we work in good faith toward the standard described in Section 4.</li>
         </ul>
-        <p>Your use of the Site is at your own risk.</p>
+        <p>Your use of the Site is at your own risk. Nothing in this section limits any rights that cannot be waived under applicable law.</p>
 
-        <h2>8. Limitation of Liability</h2>
+        <h2>9. Limitation of Liability</h2>
         <p>To the fullest extent permitted by law, LissLovesYou Inc., including its directors, employees, and volunteers, is not liable for any damages arising from:</p>
         <ul>
             <li>Use or inability to use the Site.</li>
@@ -133,26 +156,94 @@
             <li>Unauthorized access to or misuse of personal information.</li>
             <li>Any third-party content or websites.</li>
         </ul>
-        <p>This limitation applies to all claims, whether based in contract, tort, negligence, strict liability, or otherwise.</p>
+        <p>This limitation applies to all claims, whether based in contract, tort, negligence, strict liability, or otherwise. Nothing in these Terms excludes or limits liability that cannot be excluded or limited under applicable law, or limits any rights you have under disability-rights laws.</p>
 
-        <h2>9. Indemnification</h2>
+        <h2>10. Indemnification</h2>
         <p>By using the Site, you agree to indemnify and hold harmless LissLovesYou Inc. from any claims, damages, liabilities, losses, or expenses resulting from your misuse of the Site or violation of these Terms.</p>
 
-        <h2>10. Intellectual Property</h2>
+        <h2>11. Intellectual Property</h2>
         <p>All names, logos, program titles, and branding associated with LissLovesYou Inc. are protected. You may not use them without prior written consent.</p>
 
-        <h2>11. Termination</h2>
+        <h2>12. Termination</h2>
         <p>We may modify, suspend, or discontinue any part of the Site at any time without notice. We may also terminate your access if you violate these Terms.</p>
 
-        <h2>12. Governing Law</h2>
+        <h2>13. Governing Law</h2>
         <p>These Terms are governed by the laws of the State of Florida, without regard to conflict-of-law principles.</p>
         <p>Any disputes will be resolved in the state or federal courts located in Florida, and you consent to jurisdiction in those courts.</p>
 
-        <h2>13. Contact Information</h2>
-        <p>For questions about these Terms or any other matter, you may contact us at:</p>
-        <p><strong>LissLovesYou Inc.</strong><br>
-        <strong>Email:</strong> <a href="mailto:President@LissLovesYou.org"><a href="mailto:President@LissLovesYou.org">President@LissLovesYou.org</a></a><br>
-        <strong>Website:</strong> https://LissLovesYou.org</p>
-    </div>
+        <h2>14. Severability and No Waiver</h2>
+        <p>If any part of these Terms is found to be unenforceable, the remaining parts stay in effect. If we do not enforce a provision of these Terms, that is not a waiver of our right to enforce it later. These Terms, together with our <a href="privacy-policy.html">Privacy Policy</a>, <a href="refund-policy.html">Refund Policy</a>, <a href="safe-browsing.html">Safe Browsing Notice</a>, and <a href="accessibility.html">Accessibility Statement</a>, are the entire agreement between you and LissLovesYou Inc. about your use of the Site.</p>
 
-    <footer class="fo
+        <h2>15. Contact Information</h2>
+        <p>For questions about these Terms, to report an accessibility barrier, or for any other matter, you may contact us at:</p>
+        <p><strong>LissLovesYou Inc.</strong><br>
+        <strong>Email:</strong> <a href="mailto:President@LissLovesYou.org">President@LissLovesYou.org</a><br>
+        <strong>Website:</strong> https://LissLovesYou.org</p>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3 class="footer-title">Liss<span class="loves-you">LovesYou</span> Inc.</h3>
+                    <p>Supporting children migrating from disadvantaged countries into the United States with safety, education, and love.</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/lisslovesyouorg?igsh=Z25xYTR3cWc0djk3" target="_blank" rel="noopener noreferrer" aria-label="Instagram (opens in a new tab)"><svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+                        <a href="https://x.com/lisslovesyouorg?s=21&amp;t=ozc5eb7XLZ3u6HCBC7eM7w" target="_blank" rel="noopener noreferrer" aria-label="X, formerly Twitter (opens in a new tab)"><svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg></a>
+                        <a href="mailto:President@LissLovesYou.org" aria-label="Email us"><svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></a>
+                        <a href="tel:+4407723466872" aria-label="Call us"><svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></a>
+                        <a href="https://www.tiktok.com/@lisslovesyouorg?_r=1&amp;_t=ZP-924zbl2Trby" target="_blank" rel="noopener noreferrer" aria-label="TikTok (opens in a new tab)"><svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"/></svg></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <nav aria-label="Footer quick links">
+                        <ul class="footer-links">
+                            <li><a href="index.html">Homepage</a></li>
+                            <li><a href="volunteer.html">Volunteer</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="donate.html">Donate</a></li>
+                            <li><a href="crypto-donations.html"><span aria-hidden="true">&#8383; </span>Crypto Donations</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer-col">
+                    <h4 id="newsletter-heading">Newsletter</h4>
+                    <p>Join our community of care.</p>
+                    <form class="newsletter-form" aria-labelledby="newsletter-heading">
+                        <label for="newsletter-email" class="visually-hidden">Email address for the newsletter</label>
+                        <input type="email" id="newsletter-email" name="email" placeholder="Your email" autocomplete="email" required>
+                        <button type="submit" class="newsletter-btn" aria-label="Subscribe to the newsletter">
+                            <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <nav class="footer-legal-links" aria-label="Legal and policies">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <span aria-hidden="true">|</span>
+                    <a href="terms-of-use.html">Terms of Use</a>
+                    <span aria-hidden="true">|</span>
+                    <a href="refund-policy.html">Refund Policy</a>
+                    <span aria-hidden="true">|</span>
+                    <a href="safe-browsing.html">Safe Browsing</a>
+                    <span aria-hidden="true">|</span>
+                    <a href="accessibility.html">Accessibility</a>
+                </nav>
+                <p class="disclaimer">A COPY OF THE OFFICIAL REGISTRATION (CH80883) AND FINANCIAL INFORMATION MAY BE OBTAINED FROM THE DIVISION OF CONSUMER SERVICES BY CALLING TOLL-FREE WITHIN THE STATE 1-800-435-7352 OR FDACS.GOV. REGISTRATION DOES NOT IMPLY ENDORSEMENT, APPROVAL, OR RECOMMENDATION BY THE STATE</p>
+                <p class="copyright">Copyright &copy; 2026 LissLovesYou Inc. All rights reserved.</p>
+            </div>
+        </div>
+        <button type="button" class="scroll-to-top" id="scrollToTop" aria-label="Back to top of page">
+            <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="18 15 12 9 6 15"></polyline>
+            </svg>
+        </button>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
