@@ -136,3 +136,27 @@ function copyAddress(elementId, button) {
 document.querySelectorAll('[data-copy-target]').forEach(btn => {
     btn.addEventListener('click', () => copyAddress(btn.dataset.copyTarget, btn));
 });
+
+
+// Optional high-contrast mode: off by default; remembers the visitor's choice and
+// switches on automatically when their device asks for more contrast.
+(function () {
+    const root = document.documentElement;
+    const buttons = document.querySelectorAll('.contrast-toggle');
+    let stored = null;
+    try { stored = localStorage.getItem('high-contrast'); } catch (e) { /* storage unavailable */ }
+    const wantsMore = window.matchMedia && window.matchMedia('(prefers-contrast: more)').matches;
+    const apply = (on) => {
+        root.classList.toggle('high-contrast', on);
+        buttons.forEach(b => {
+            b.setAttribute('aria-pressed', String(on));
+            b.textContent = on ? 'High contrast: on' : 'High contrast: off';
+        });
+    };
+    apply(stored === null ? wantsMore : stored === 'on');
+    buttons.forEach(b => b.addEventListener('click', () => {
+        const on = !root.classList.contains('high-contrast');
+        apply(on);
+        try { localStorage.setItem('high-contrast', on ? 'on' : 'off'); } catch (e) { /* ignore */ }
+    }));
+})();

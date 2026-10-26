@@ -1,8 +1,8 @@
 /* LissLovesYou - Enhanced with Animations & Visual Impact */
 :root {
     --pink: #ff699b; /* original brand pink (fills, borders, accents) */
-    --pink-text: #cf2563; /* same pink, slightly deeper, used only where pink is text on a light background (5.1:1) */
-    --on-pink: #1a1a1a; /* text on pink fills (6.4:1) */
+    --pink-text: #ff699b; /* identical to --pink by default; High contrast mode deepens it */
+    --on-pink: #ffffff; /* button text; High contrast mode switches pink fills to deeper pink */
     --light-pink: #ffb6ce;
     --yellow: #ffeb89;
     --light-blue: #a3e0ff;
@@ -339,7 +339,7 @@ html {
 .badge {
     display: inline-block;
     background: var(--light-pink);
-    color: var(--text-dark);
+    color: var(--pink-text);
     padding: 10px 24px;
     border-radius: 50px;
     font-weight: 700;
@@ -817,7 +817,7 @@ html {
     flex: 1;
     padding: 12px 16px;
     border-radius: 8px;
-    border: 2px solid #8c8c8c;
+    border: none;
     background: rgba(255, 255, 255, 0.1);
     color: white;
     transition: all 0.3s ease;
@@ -828,7 +828,7 @@ html {
 }
 
 .newsletter-form input::placeholder {
-    color: rgba(255, 255, 255, 0.75);
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .newsletter-btn {
@@ -1258,11 +1258,19 @@ main address a {
 }
 
 .photo-overlay--from-left {
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.64) 0%, rgba(0, 0, 0, 0.6) 70%, rgba(0, 0, 0, 0.35) 100%);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.2) 100%);
+}
+
+.photo-overlay--hero {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.1) 100%);
+}
+
+.photo-overlay--donate {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.35) 50%, rgba(0, 0, 0, 0.15) 100%);
 }
 
 .photo-overlay--from-right {
-    background: linear-gradient(to left, rgba(0, 0, 0, 0.64) 0%, rgba(0, 0, 0, 0.6) 70%, rgba(0, 0, 0, 0.35) 100%);
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.2) 100%);
 }
 
 /* Forms */
@@ -1370,11 +1378,11 @@ fieldset.form-group legend {
 
 .copy-btn--btc {
     background: #f7931a;
-    color: #1a1a1a;
+    color: #ffffff;
 }
 
 .copy-btn--eth {
-    background: #3f55c4;
+    background: #627eea;
     color: #ffffff;
 }
 
@@ -1477,10 +1485,6 @@ fieldset.form-group legend {
 }
 
 @media (max-width: 968px) {
-    .photo-overlay--from-left,
-    .photo-overlay--from-right {
-        background: rgba(0, 0, 0, 0.62);
-    }
 }
 
 @media (max-width: 480px) {
@@ -1525,5 +1529,68 @@ fieldset.form-group legend {
     }
 }
 
-/* Icons/text placed on the brand-pink fill use dark ink so the original pink can stay as is */
-.social-icons a:hover { color: var(--on-pink); }
+
+/* ------------------------------------------------------------------
+   Optional "High contrast" mode (visitor-controlled; off by default so the
+   normal design is unchanged). Also turns on automatically for visitors whose
+   device asks for more contrast (prefers-contrast: more).
+   ------------------------------------------------------------------ */
+.contrast-toggle {
+    background: none;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
+.contrast-toggle:hover { color: var(--pink); }
+
+html.high-contrast {
+    --pink: #c4205e;
+    --pink-text: #c4205e;
+}
+
+html.high-contrast .btn-primary,
+html.high-contrast .donate-btn,
+html.high-contrast .scroll-to-top {
+    background: linear-gradient(135deg, #c4205e 0%, #a31650 100%);
+}
+
+html.high-contrast .newsletter-btn:hover { background: #a31650; }
+html.high-contrast .social-icons a:hover { color: #fff; }
+html.high-contrast .badge { color: var(--text-dark); }
+html.high-contrast .yellow-badge[style] { background: rgba(0, 0, 0, 0.45) !important; }
+html.high-contrast .newsletter-form input { border: 2px solid #8c8c8c; }
+html.high-contrast .newsletter-form input::placeholder { color: rgba(255, 255, 255, 0.75); }
+
+html.high-contrast .photo-overlay--from-left,
+html.high-contrast .photo-overlay--hero,
+html.high-contrast .photo-overlay--donate {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.64) 0%, rgba(0, 0, 0, 0.6) 70%, rgba(0, 0, 0, 0.35) 100%);
+}
+
+html.high-contrast .photo-overlay--from-right {
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.64) 0%, rgba(0, 0, 0, 0.6) 70%, rgba(0, 0, 0, 0.35) 100%);
+}
+
+@media (max-width: 968px) {
+    html.high-contrast .photo-overlay--from-left,
+    html.high-contrast .photo-overlay--from-right,
+    html.high-contrast .photo-overlay--hero,
+    html.high-contrast .photo-overlay--donate {
+        background: rgba(0, 0, 0, 0.62);
+    }
+}
+
+/* Pink on the dark footer stays the bright brand pink in every mode */
+html.high-contrast .footer .loves-you,
+html.high-contrast .contrast-toggle:hover {
+    color: #ff699b;
+}
+
+html.high-contrast .copy-btn--btc { color: #1a1a1a; }
+html.high-contrast .copy-btn--eth { background: #3f55c4; }

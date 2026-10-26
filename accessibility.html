@@ -44,7 +44,7 @@
         <ul>
             <li>Added a "Skip to main content" link and clear page structure (headings, navigation, main content, and footer) so screen reader users can move around quickly.</li>
             <li>Made every page usable with a keyboard alone, with a clearly visible focus indicator. The mobile menu opens and closes from the keyboard, and the Escape key closes it.</li>
-            <li>Chose text, button, and form colors to meet minimum contrast ratios, including text that appears over photographs.</li>
+            <li>Added a "High contrast" switch in the footer of every page. It deepens button and text colors and darkens the overlay behind text on photographs so they meet minimum contrast ratios. It also turns on automatically if your device asks for more contrast, and the site remembers your choice.</li>
             <li>Added text descriptions for meaningful images and hid purely decorative images and icons from screen readers. Our cryptocurrency QR codes are always accompanied by the wallet address as text.</li>
             <li>Gave every form field a visible, correctly connected label, marked required fields, and made phone numbers optional so that no one has to share a phone number to contact us.</li>
             <li>Told visitors when a link opens in a new tab.</li>
@@ -131,6 +131,8 @@
                     <a href="safe-browsing.html">Safe Browsing</a>
                     <span aria-hidden="true">|</span>
                     <a href="accessibility.html">Accessibility</a>
+                    <span aria-hidden="true">|</span>
+                    <button type="button" class="contrast-toggle" aria-pressed="false">High contrast: off</button>
                 </nav>
                 <p class="disclaimer">A COPY OF THE OFFICIAL REGISTRATION (CH80883) AND FINANCIAL INFORMATION MAY BE OBTAINED FROM THE DIVISION OF CONSUMER SERVICES BY CALLING TOLL-FREE WITHIN THE STATE 1-800-435-7352 OR FDACS.GOV. REGISTRATION DOES NOT IMPLY ENDORSEMENT, APPROVAL, OR RECOMMENDATION BY THE STATE</p>
                 <p class="copyright">Copyright &copy; 2026 LissLovesYou Inc. All rights reserved.</p>
